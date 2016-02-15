@@ -1,0 +1,7 @@
+---
+- name: role dependencies
+  hosts: localhost
+  roles:
+    - role: sub-role
+    - role: main-role
+      top_level_foo: "bar"

@@ -1,0 +1,6 @@
+---
+- fail: msg="sub_role_foo is required"
+  when: sub_role_bar == 'sub_role_bar' and
+        sub_role_foo is not defined
+
+- debug: msg="sub_role_foo is {{ sub_role_foo }}"

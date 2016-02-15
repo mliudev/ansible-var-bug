@@ -1,0 +1,5 @@
+---
+dependencies:
+  - role: sub-role
+    sub_role_bar: "sub_role_bar"
+    sub_role_foo: "{{ top_level_foo }}"

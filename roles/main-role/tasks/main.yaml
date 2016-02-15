@@ -1,0 +1,5 @@
+---
+- fail: msg="top_level_foo is required"
+  when: top_level_foo is not defined
+
+- debug: msg="top_level_foo is {{ top_level_foo }}"
