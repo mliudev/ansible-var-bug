@@ -1,11 +1,14 @@
 # ansible-var-bug
 Demonstrates an ansible variable resolution bug.
 
+Run the playbook with `ansible-playbook -i hosts playbook.yaml`.
+
 The playbook will demonstrate a bug with ansible variable resolution. The bug
 occurs when calling a role that is also a dependency of another role. In the
 first invocation of the sub-role no parameters are specified because there are
 valid defaults in the sub-role defaults folder. In the main-role which depends
-on the sub-role we override the sub-role variable with a main-role variable.
+on the sub-role we override the sub-role variable with a top level variable
+passed in to main-role. 
 
 What we expect to happen is that the first call to sub-role from the playbook
 executes successfully using its default vars. We also expect to see the
